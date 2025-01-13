@@ -6,3 +6,8 @@ def home(request):
 def room(request):
     return render(request, "room.html")
 
+def rooms(request, r_id):
+    return render(request, "rooms.html", {
+        "r_id": r_id
+    })
+
