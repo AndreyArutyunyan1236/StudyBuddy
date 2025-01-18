@@ -3,11 +3,14 @@
 
 <h1>Home Page!</h1>
 
+<h2>There are All the Rooms</h2>
+<div>
+    <div>
+        {% for room in rooms %}
+            <h5>{{room.id}} -- <a href="{% url 'room' room.id %}">{{room.name}}</a></h5>
+        {% endfor %}
+    </div>
+</div>
 
-<a href="rooms/">
-    <p>
-        Change page to Rooms
-    </p>
-</a>
 
 {% endblock content %}

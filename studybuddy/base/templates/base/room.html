@@ -1,13 +1,9 @@
 {% extends 'main.html' %}
 {% block content %}
-<h2>There are All the Rooms</h2>
-<div>
-    <div>
-        {% for room in rooms %}
-            <h5>{{room.id}} -- {{room.name}}</h5>
-        {% endfor %}
-    </div>
-</div>
+
+<h1>Room Template</h1>
+<h2>{{room.name}}</h2>
+<p>{{room}}</p>
 
 {% endblock content %}
 
