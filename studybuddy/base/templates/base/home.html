@@ -6,12 +6,14 @@
 <h2>There are All the Rooms</h2>
 <div>
     <div>
-        <a href="newroom/">Create Room</a>
-        <br>
+        <button><a href="newroom/">Create Room</a></button>
+        
         {% for room in rooms %}
-            <span>@{{room.host.username}}</span>
+            <p>@{{room.host.username}}</p>
             <h5>{{room.id}} -- <a href="room/{{room.id}}">{{room.name}}</a></h5> 
             <small>{{room.topic.name}}</small>
+            
+            <button><a href="updateroom/{{room.id}}">Edit</a></button>
             <hr>
         {% endfor %}
     </div>
